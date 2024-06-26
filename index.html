@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English or Spanish?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background audio -->
+    <audio id="backgroundAudio" loop>
+        <source src="background_audio.mp3" type="audio/mpeg">
+        
+    </audio>
+
+    <div class="box">
+        <h1>ENGLISH OR SPANISH?</h1>
+        <br><br><br><br>
+        <input id="answerInput" type="text" placeholder="Your answer here">
+        <br><br><br>
+        <button id="submitButton">
+            Submit
+        </button>
+    </div>
+
+    <script>
+        document.getElementById('submitButton').addEventListener('click', function() {
+            let userInput = document.getElementById('answerInput').value.trim().toLowerCase();
+            if (userInput === 'english') {
+                alert("Who moves first is gay");
+            } else if (userInput === 'spanish') {
+                alert("el que se mueve primero es gay");
+            } else {
+                alert("Input not recognized. Please enter 'english' or 'spanish'.");
+            }
+
+            document.getElementById('backgroundAudio').play();
+        });
+    </script>
+</body>
+</html>
